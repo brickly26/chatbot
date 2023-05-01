@@ -1,8 +1,6 @@
 import { FC } from "react";
 
-interface ChatProps {}
-
-const Chat: FC<ChatProps> = ({}) => {
+const Chat: FC = ({}) => {
   return <div>Chat</div>;
 };
 
