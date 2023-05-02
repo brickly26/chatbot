@@ -1,6 +1,7 @@
 "use client";
 
 import { cn } from "@/lib/utils";
+import { Message } from "@/lib/validators/message";
 import { useMutation } from "@tanstack/react-query";
 import { nanoid } from "nanoid";
 import { FC, HTMLAttributes, useState } from "react";
@@ -36,9 +37,9 @@ const ChatInput: FC<ChatInputProps> = ({ className, ...props }) => {
           onKeyDown={(e) => {
             if (e.key === "Enter" && !e.shiftKey) {
               e.preventDefault();
-              const message = {
+              const message: Message = {
                 id: nanoid(),
-                isUserInput: true,
+                isUserMessage: true,
                 text: input,
               };
 
